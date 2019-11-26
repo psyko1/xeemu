@@ -103,6 +103,10 @@ sudo apt-get install sublime-text -y
 #location /laravel {
 #	try_files $uri $uri/ /laravel/public/index.php?$query_string;		
 #}	
+ # string perameters not working in Nginx 
+ 
+   location / {
+        try_files $uri $uri/ /index.php?args;
 
 # extra tools
 #sudo apt-get install ubuntu-restricted-extras
